@@ -1,6 +1,8 @@
 const options = document.querySelectorAll(".menu__option");
 for (const option of options) {
     option.addEventListener("click", () => {
+        wrapper.classList.toggle("active");
+        menu.classList.toggle("active-menu");
         for (const option of options) {
             option.classList.remove("menu__option__active");
         }
