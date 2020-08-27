@@ -1,0 +1,11 @@
+$main-color:#303d67;
+$active-color:#4125c7;
+$theme: #f8f7fc;
+
+@mixin circle($left, $top, $width, $back) {
+    left: $left;
+    top: $top;
+    width: $width;
+    height: $width;
+    background-color: $back;
+}
