@@ -2,13 +2,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px;
     background-color: $theme;
 
     .logo {
-        width: 100px;
-        height: 20px;
-        background: #4125c7;
+        text-transform: uppercase;
+        color: $active-color;
+        font-size: 1.4rem;
+        margin-left: 10px;
     }
 
     .menu {
@@ -22,10 +23,15 @@ nav {
             margin: 0 5px;
             padding: 8px 15px;
             cursor: pointer;
+        }
 
-            &__active {
-                color: $active-color;
-            }
+        &__mobile {
+            display: none;
+            color: $main-color;
+        }
+
+        &__active {
+            color: $active-color;
         }
 
         &__contact {
@@ -36,74 +42,26 @@ nav {
     }
 }
 
-.wrapper {
-    display: none;
-    position: absolute;
-    top: 15px;
-    right: 5px;
-    cursor: pointer;
-    z-index: 100;
-    transform: scale(0.8);
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-    background-color: $active-color;
-    border-radius: 50%;
-    margin: 5px;
-    transition: .3s;
-}
-
-.active .dot {
-    margin-top: 10px;
-}
-
-.active .dot-two {
-    transform: translateY(-35px);
-    opacity: 0;
-    transition: .5s;
-}
-
-.active .dot-one {
-    border-radius: 0;
-    transform-origin: 0% 0%;
-    transform: translate(14px, -14px) rotate(45deg) scaleX(4.1);
-    transition: transform .4s linear;
-}
-
-.active .dot-three {
-    border-radius: 0;
-    transform-origin: 100% 0%;
-    transform: translate(-14px, -14px) rotate(-45deg) scaleX(4.1);
-    transition: transform .4s linear;
-}
-
-@media all and (max-width:800px) {
+@media all and (max-width:700px) {
     nav .menu {
-        flex-flow: column wrap;
-        position: absolute;
-        top: -300px;
+        position: fixed;
         left: 0;
-        width: 100vw;
-        z-index: 10;
-        transition: .4s;
+        bottom: 0;
+        z-index: 3;
+        width: 100%;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 20px 45px;
+        border-radius: 20px 20px 0 0;
 
-        a {
-            width: 100%;
-            color: $main-color;
-            box-shadow: none;
-            text-align: center;
-            background-color: $theme;
+        &__option {
+            display: none;
         }
 
-        &.active-menu {
-            top: 50px;
-            transition: .5s;
+        &__mobile {
+            display: block;
+            font-size: 1.5rem;
         }
-    }
 
-    .wrapper {
-        display: flex;
     }
 }

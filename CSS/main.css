@@ -97,14 +97,15 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px 30px;
+  padding: 15px;
   background-color: #f8f7fc;
 }
 
 nav .logo {
-  width: 100px;
-  height: 20px;
-  background: #4125c7;
+  text-transform: uppercase;
+  color: #4125c7;
+  font-size: 1.4rem;
+  margin-left: 10px;
 }
 
 nav .menu {
@@ -127,7 +128,12 @@ nav .menu__option {
   cursor: pointer;
 }
 
-nav .menu__option__active {
+nav .menu__mobile {
+  display: none;
+  color: #303d67;
+}
+
+nav .menu__active {
   color: #4125c7;
 }
 
@@ -138,94 +144,26 @@ nav .menu__contact {
           box-shadow: 0px 2px 6px #4125c7;
 }
 
-.wrapper {
-  display: none;
-  position: absolute;
-  top: 15px;
-  right: 5px;
-  cursor: pointer;
-  z-index: 100;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background-color: #4125c7;
-  border-radius: 50%;
-  margin: 5px;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.active .dot {
-  margin-top: 10px;
-}
-
-.active .dot-two {
-  -webkit-transform: translateY(-35px);
-          transform: translateY(-35px);
-  opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.active .dot-one {
-  border-radius: 0;
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-  -webkit-transform: translate(14px, -14px) rotate(45deg) scaleX(4.1);
-          transform: translate(14px, -14px) rotate(45deg) scaleX(4.1);
-  -webkit-transition: -webkit-transform .4s linear;
-  transition: -webkit-transform .4s linear;
-  transition: transform .4s linear;
-  transition: transform .4s linear, -webkit-transform .4s linear;
-}
-
-.active .dot-three {
-  border-radius: 0;
-  -webkit-transform-origin: 100% 0%;
-          transform-origin: 100% 0%;
-  -webkit-transform: translate(-14px, -14px) rotate(-45deg) scaleX(4.1);
-          transform: translate(-14px, -14px) rotate(-45deg) scaleX(4.1);
-  -webkit-transition: -webkit-transform .4s linear;
-  transition: -webkit-transform .4s linear;
-  transition: transform .4s linear;
-  transition: transform .4s linear, -webkit-transform .4s linear;
-}
-
-@media all and (max-width: 800px) {
+@media all and (max-width: 700px) {
   nav .menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-    position: absolute;
-    top: -300px;
+    position: fixed;
     left: 0;
-    width: 100vw;
-    z-index: 10;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  nav .menu a {
+    bottom: 0;
+    z-index: 3;
     width: 100%;
-    color: #303d67;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    text-align: center;
-    background-color: #f8f7fc;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #fff;
+    padding: 20px 45px;
+    border-radius: 20px 20px 0 0;
   }
-  nav .menu.active-menu {
-    top: 50px;
-    -webkit-transition: .5s;
-    transition: .5s;
+  nav .menu__option {
+    display: none;
   }
-  .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  nav .menu__mobile {
+    display: block;
+    font-size: 1.5rem;
   }
 }
 
@@ -432,10 +370,12 @@ nav .menu__contact {
   color: #303d67;
   font-size: 1.5rem;
   font-weight: bold;
+  line-height: 1.7rem;
 }
 
 .third .service .desc__title2 {
   padding-top: 10px;
+  line-height: 1.3rem;
 }
 
 .third .service .desc__text {
@@ -466,10 +406,6 @@ nav .menu__contact {
   padding: 0 20px;
   margin-right: 20px;
   font-size: 1.3rem;
-}
-
-.third .service .desc__feature .fa-mail-bulk {
-  color: #F9C400;
 }
 
 .third .service .desc__feature .text .title {
@@ -504,24 +440,25 @@ nav .menu__contact {
   .third .service {
     padding: 20px 0;
   }
-  .third .service .build {
-    margin: 40px 20px;
+  .third .service .build,
+  .third .service .delivery {
+    margin: 50px 10px;
     max-width: 30rem;
   }
 }
 
 @media all and (max-width: 750px) {
   .third {
-    padding: 30px 40px;
+    padding: 30px;
   }
   .third .service .desc {
     margin: 20px 0;
-    padding: 0 30px;
+    padding: 0 20px;
   }
 }
 
 .contact {
-  padding: 2.3rem 4.2rem;
+  padding: 2.3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -542,12 +479,14 @@ nav .menu__contact {
   color: #303d67;
   font-size: 2rem;
   margin-bottom: 0;
+  padding: 0 2.7rem;
 }
 
 .contact .subtitle {
   color: #303d67;
   max-width: 600px;
   text-align: center;
+  padding: 0 2.7rem;
 }
 
 .contact .newsletter {
@@ -562,10 +501,12 @@ nav .menu__contact {
   -webkit-box-shadow: 0 0 8px #303d67;
           box-shadow: 0 0 8px #303d67;
   width: 32rem;
+  position: relative;
+  z-index: 2;
 }
 
 .contact .newsletter input {
-  padding: 0.7rem 1.4rem;
+  padding: 0.7rem 1.2rem;
   border: 0 none;
   border-radius: 40px;
   width: 100%;
@@ -609,7 +550,13 @@ footer {
 
 @media all and (max-width: 1000px) {
   .contact .newsletter {
-    width: 27rem;
+    width: 25rem;
+  }
+}
+
+@media all and (max-width: 700px) {
+  footer {
+    margin-bottom: 60px;
   }
 }
 
@@ -630,8 +577,16 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-*:focus {
-  outline: 0 none;
+:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.no-js :focus,
+.keyboard-focus :focus {
+  -webkit-box-shadow: 0 0 2px 1px #303d67;
+          box-shadow: 0 0 2px 1px #303d67;
 }
 
 a {
@@ -715,13 +670,19 @@ section {
 
 @media all and (max-width: 1100px) {
   html {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 
 @media all and (max-width: 650px) {
   html {
-    font-size: 10px;
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .arrow-up {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

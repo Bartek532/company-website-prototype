@@ -34,10 +34,12 @@
                 color: $main-color;
                 font-size: 1.5rem;
                 font-weight: bold;
+                line-height: 1.7rem;
             }
 
             &__title2 {
                 padding-top: 10px;
+                line-height: 1.3rem;
             }
 
             &__text {
@@ -59,10 +61,6 @@
                     padding: 0 20px;
                     margin-right: 20px;
                     font-size: 1.3rem;
-                }
-
-                .fa-mail-bulk {
-                    color: #F9C400;
                 }
 
                 .text {
@@ -102,22 +100,24 @@
     .third .service {
         padding: 20px 0;
 
-        .build {
-            margin: 40px 20px;
+        .build,
+        .delivery {
+            margin: 50px 10px;
             max-width: 30rem;
         }
+
     }
 }
 
 @media all and(max-width:750px) {
     .third {
-        padding: 30px 40px;
+        padding: 30px;
 
         .service {
 
             .desc {
                 margin: 20px 0;
-                padding: 0 30px;
+                padding: 0 20px;
             }
         }
     }

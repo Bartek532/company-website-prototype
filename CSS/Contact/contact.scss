@@ -1,5 +1,5 @@
 .contact {
-    padding: 2.3rem 4.2rem;
+    padding: 2.3rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,12 +10,14 @@
         color: $main-color;
         font-size: 2rem;
         margin-bottom: 0;
+        padding: 0 2.7rem;
     }
 
     .subtitle {
         color: $main-color;
         max-width: 600px;
         text-align: center;
+        padding: 0 2.7rem;
     }
 
     .newsletter {
@@ -25,13 +27,15 @@
         margin: 3rem 0 0.6rem 0;
         box-shadow: 0 0 8px $main-color;
         width: 32rem;
+        position: relative;
+        z-index: 2;
 
         input {
-            padding: 0.7rem 1.4rem;
+            padding: 0.7rem 1.2rem;
             border: 0 none;
             border-radius: 40px;
             width: 100%;
-            font-size: 1rem
+            font-size: 1rem;
         }
 
         button {
@@ -72,6 +76,12 @@ footer {
 
 @media all and (max-width:1000px) {
     .contact .newsletter {
-        width: 27rem;
+        width: 25rem;
+    }
+}
+
+@media all and (max-width:700px) {
+    footer {
+        margin-bottom: 60px;
     }
 }
