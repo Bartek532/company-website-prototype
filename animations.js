@@ -3,9 +3,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 //start
 tl.from(".menu", 0.5, {
-	opacity: 0,
-	x: 300,
-})
+		opacity: 0,
+		x: 300,
+	})
 	.addLabel("start")
 	.from(".first h1", 0.3, {
 		opacity: 0,
@@ -13,8 +13,7 @@ tl.from(".menu", 0.5, {
 	})
 	.from(
 		".first p",
-		0.3,
-		{
+		0.3, {
 			opacity: 0,
 			y: 100,
 		},
@@ -28,8 +27,7 @@ tl.from(".menu", 0.5, {
 	})
 	.from(
 		".purple",
-		0.4,
-		{
+		0.4, {
 			opacity: 0,
 			x: -50,
 		},
@@ -37,8 +35,7 @@ tl.from(".menu", 0.5, {
 	)
 	.from(
 		".green",
-		0.4,
-		{
+		0.4, {
 			opacity: 0,
 			x: 50,
 		},
@@ -67,8 +64,7 @@ team
 	})
 	.from(
 		".team #person4",
-		0.5,
-		{
+		0.5, {
 			x: 400,
 			opacity: 0,
 		},
@@ -76,8 +72,7 @@ team
 	)
 	.from(
 		".team #person2",
-		0.5,
-		{
+		0.5, {
 			y: -400,
 			opacity: 0,
 		},
@@ -85,8 +80,7 @@ team
 	)
 	.from(
 		".team #person3",
-		0.5,
-		{
+		0.5, {
 			y: -300,
 			opacity: 0,
 		},
@@ -109,8 +103,7 @@ about
 	})
 	.from(
 		".header p",
-		0.3,
-		{
+		0.3, {
 			opacity: 0,
 			y: 70,
 		},
@@ -174,7 +167,8 @@ services
 let socials = gsap.timeline({
 	scrollTrigger: {
 		trigger: "#social",
-		start: "top 90%",
+		start: "top 50%",
+		markers: true,
 		end: "+=200px",
 	},
 });
@@ -192,8 +186,7 @@ socials
 	})
 	.from(
 		"#floor",
-		0.4,
-		{
+		0.4, {
 			transformOrigin: "50% 50%",
 			scale: 0,
 		},
@@ -231,8 +224,7 @@ contact
 	})
 	.from(
 		".contact .subtitle",
-		0.4,
-		{
+		0.4, {
 			y: 200,
 			opacity: 0,
 		},
