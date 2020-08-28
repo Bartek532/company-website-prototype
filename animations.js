@@ -168,7 +168,6 @@ let socials = gsap.timeline({
 	scrollTrigger: {
 		trigger: "#social",
 		start: "top 50%",
-		markers: true,
 		end: "+=200px",
 	},
 });
