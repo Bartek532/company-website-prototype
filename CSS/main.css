@@ -329,7 +329,7 @@ nav .menu__contact {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   background-color: #f8f7fc;
-  padding: 60px 80px;
+  padding: 60px 70px;
 }
 
 .third .service {
@@ -357,7 +357,7 @@ nav .menu__contact {
 }
 
 .third .service .second__desc {
-  margin: 0 0 0 50px;
+  margin-left: 20px;
 }
 
 .third .service .desc {

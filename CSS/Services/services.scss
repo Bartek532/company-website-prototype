@@ -4,7 +4,7 @@
     align-items: center;
     flex-flow: column wrap;
     background-color: $theme;
-    padding: 60px 80px;
+    padding: 60px 70px;
 
     .service {
         display: flex;
@@ -22,7 +22,7 @@
         }
 
         .second__desc {
-            margin: 0 0 0 50px;
+            margin-left: 20px;
         }
 
         .desc {
