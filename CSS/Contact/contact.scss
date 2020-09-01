@@ -87,7 +87,8 @@ footer {
 		box-shadow: none;
 		align-items: center;
 
-		input {
+		input,
+		input:focus {
 			box-shadow: 0 0 8px $main-color;
 		}
 

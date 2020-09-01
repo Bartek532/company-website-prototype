@@ -565,7 +565,8 @@ footer {
         -ms-flex-align: center;
             align-items: center;
   }
-  .contact .newsletter input {
+  .contact .newsletter input,
+  .contact .newsletter input:focus {
     -webkit-box-shadow: 0 0 8px #303d67;
             box-shadow: 0 0 8px #303d67;
   }
