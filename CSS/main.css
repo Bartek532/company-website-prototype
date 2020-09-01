@@ -577,16 +577,14 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+*:focus {
+  -webkit-box-shadow: 0 0 2px 1px #303d67;
+          box-shadow: 0 0 2px 1px #303d67;
   outline: none;
 }
 
-.no-js :focus,
-.keyboard-focus :focus {
-  -webkit-box-shadow: 0 0 2px 1px #303d67;
-          box-shadow: 0 0 2px 1px #303d67;
+p {
+  line-height: 1.4rem;
 }
 
 a {
@@ -611,8 +609,8 @@ section {
 
 .arrow-up:hover {
   color: #4125c7;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .circle {
@@ -625,7 +623,7 @@ section {
   top: 13rem;
   width: 3rem;
   height: 3rem;
-  background-color: #F9C400;
+  background-color: #f9c400;
 }
 
 .circle-2 {
