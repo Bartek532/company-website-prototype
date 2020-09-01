@@ -1,87 +1,105 @@
 .contact {
-    padding: 2.3rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
+	padding: 2.3rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column wrap;
 
-    .title {
-        text-transform: uppercase;
-        color: $main-color;
-        font-size: 2rem;
-        margin-bottom: 0;
-        padding: 0 2.7rem;
-    }
+	.title {
+		text-transform: uppercase;
+		color: $main-color;
+		font-size: 2rem;
+		margin-bottom: 0;
+		padding: 0 2.7rem;
+	}
 
-    .subtitle {
-        color: $main-color;
-        max-width: 600px;
-        text-align: center;
-        padding: 0 2.7rem;
-    }
+	.subtitle {
+		color: $main-color;
+		max-width: 600px;
+		text-align: center;
+		padding: 0 2.7rem;
+	}
 
-    .newsletter {
-        display: flex;
-        justify-content: space-between;
-        border-radius: 40px;
-        margin: 3rem 0 0.6rem 0;
-        box-shadow: 0 0 8px $main-color;
-        width: 32rem;
-        position: relative;
-        z-index: 2;
+	.newsletter {
+		display: flex;
+		justify-content: space-between;
+		border-radius: 40px;
+		margin: 3rem 0 0.6rem 0;
+		box-shadow: 0 0 8px $main-color;
+		width: 32rem;
+		position: relative;
+		z-index: 2;
 
-        input {
-            padding: 0.7rem 1.2rem;
-            border: 0 none;
-            border-radius: 40px;
-            width: 100%;
-            font-size: 1rem;
-        }
+		input {
+			padding: 0.7rem 1.2rem;
+			border: 0 none;
+			border-radius: 40px;
+			width: 100%;
+			font-size: 1rem;
+			opacity: 0.5;
 
-        button {
-            border-radius: 40px;
-            padding: 0.6rem 2.1rem;
-            font-size: 1rem;
-            border: 2px solid $active-color;
-            color: #fff;
-            text-transform: uppercase;
-            background-color: $active-color;
-            cursor: pointer;
-            font-weight: bold;
+			&:focus {
+				box-shadow: none;
+				opacity: 1;
+				transition: opacity 0.3s ease-in;
+			}
+		}
 
-            &:hover {
-                color: $active-color;
-                background-color: #fff;
-                transition: .3s;
-            }
-        }
-    }
+		button {
+			border-radius: 40px;
+			padding: 0.6rem 2.1rem;
+			font-size: 1rem;
+			border: 2px solid $active-color;
+			color: #fff;
+			text-transform: uppercase;
+			background-color: $active-color;
+			cursor: pointer;
+			font-weight: bold;
 
-    .warning {
-        color: red;
-        font-size: 0.8rem;
-        display: none;
-    }
+			&:hover {
+				color: $active-color;
+				background-color: #fff;
+				transition: 0.3s;
+			}
+		}
+	}
+
+	.warning {
+		color: red;
+		font-size: 0.8rem;
+		display: none;
+	}
 }
 
 footer {
-    width: 100%;
-    background-color: $active-color;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 30px;
+	width: 100%;
+	background-color: $active-color;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 30px;
 }
 
-@media all and (max-width:1000px) {
-    .contact .newsletter {
-        width: 25rem;
-    }
+@media all and (max-width: 1000px) {
+	.contact .newsletter {
+		flex-flow: column wrap;
+		box-shadow: none;
+		align-items: center;
+
+		input {
+			box-shadow: 0 0 8px $main-color;
+		}
+
+		button {
+			margin-top: 20px;
+			width: 12rem;
+		}
+	}
 }
 
-@media all and (max-width:700px) {
-    footer {
-        margin-bottom: 60px;
-    }
+@media all and (max-width: 700px) {
+	footer {
+		margin-bottom: 60px;
+	}
 }

@@ -507,6 +507,15 @@ nav .menu__contact {
   border-radius: 40px;
   width: 100%;
   font-size: 1rem;
+  opacity: 0.5;
+}
+
+.contact .newsletter input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 
 .contact .newsletter button {
@@ -524,8 +533,8 @@ nav .menu__contact {
 .contact .newsletter button:hover {
   color: #4125c7;
   background-color: #fff;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .contact .warning {
@@ -546,7 +555,23 @@ footer {
 
 @media all and (max-width: 1000px) {
   .contact .newsletter {
-    width: 25rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact .newsletter input {
+    -webkit-box-shadow: 0 0 8px #303d67;
+            box-shadow: 0 0 8px #303d67;
+  }
+  .contact .newsletter button {
+    margin-top: 20px;
+    width: 12rem;
   }
 }
 
