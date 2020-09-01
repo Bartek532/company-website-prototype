@@ -19,17 +19,3 @@ for (const identifier of identifiers) {
 		}
 	});
 }
-
-function menu(options) {
-	for (const option of options) {
-		option.addEventListener('click', () => {
-			for (const option of options) {
-				option.classList.remove('menu__active');
-			}
-			option.classList.add('menu__active');
-		});
-	}
-}
-
-menu(desktop);
-menu(mobile);

@@ -1,6 +1,13 @@
 const tl = new TimelineMax();
-gsap.registerPlugin(ScrollTrigger);
-
+function timeline(trigger, start, end) {
+	return gsap.timeline({
+		scrollTrigger: {
+			trigger: trigger,
+			start: start,
+			end: end
+		}
+	});
+}
 //start
 tl.from('.menu', 0.5, {
 	opacity: 0,
@@ -45,20 +52,13 @@ tl.from('.menu', 0.5, {
 		'button'
 	);
 //team
-let team = gsap.timeline({
-	scrollTrigger: {
-		trigger: '.team',
-		start: 'top 80%',
-		end: '+=100px'
-	}
-});
-
-team.from('.team #back', 0.5, {
-	scaleX: 0,
-	opacity: 0,
-	x: -400,
-	transformOrigin: '0% 50%'
-})
+timeline('.team', 'top 80%', '+=100px')
+	.from('.team #back', 0.5, {
+		scaleX: 0,
+		opacity: 0,
+		x: -400,
+		transformOrigin: '0% 50%'
+	})
 	.addLabel('team')
 	.from('.team #person1', 0.5, {
 		x: -400,
@@ -92,15 +92,8 @@ team.from('.team #back', 0.5, {
 		'team'
 	);
 
-let about = gsap.timeline({
-	scrollTrigger: {
-		trigger: '.second',
-		start: 'top 50%',
-		end: '+=100px'
-	}
-});
-
-about
+//about
+timeline('.second', 'top 50%', '+=100px')
 	.addLabel('header')
 	.from('.header h2', 0.3, {
 		y: -70,
@@ -127,15 +120,7 @@ about
 	});
 
 //services
-let services = gsap.timeline({
-	scrollTrigger: {
-		trigger: '#services',
-		start: 'top 80%',
-		end: '+=100px'
-	}
-});
-
-services
+timeline('#services', 'top 80%', '+=100px')
 	.from('#services .desc', 0.5, {
 		x: -400,
 		opacity: 0
@@ -170,15 +155,8 @@ services
 	});
 
 //socials
-let socials = gsap.timeline({
-	scrollTrigger: {
-		trigger: '#social',
-		start: 'top 50%',
-		end: '+=200px'
-	}
-});
 
-socials
+timeline('#social', 'top 50%', '+=200px')
 	.from('#social .desc', 0.5, {
 		x: -400,
 		opacity: 0
@@ -215,14 +193,7 @@ socials
 
 //contact
 
-let contact = gsap.timeline({
-	scrollTrigger: {
-		trigger: '#contact',
-		start: 'top 70%'
-	}
-});
-
-contact
+timeline('#contact', 'top 70%')
 	.addLabel('header')
 	.from('.contact .title', 0.4, {
 		y: -200,
