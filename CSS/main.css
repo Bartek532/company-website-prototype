@@ -496,7 +496,7 @@ nav .menu__contact {
   margin: 3rem 0 0.6rem 0;
   -webkit-box-shadow: 0 0 8px #303d67;
           box-shadow: 0 0 8px #303d67;
-  width: 32rem;
+  width: 30rem;
   position: relative;
   z-index: 2;
 }
@@ -564,6 +564,7 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 24rem;
   }
   .contact .newsletter input,
   .contact .newsletter input:focus {
