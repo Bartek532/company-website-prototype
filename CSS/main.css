@@ -188,7 +188,7 @@ nav .menu__contact {
 }
 
 .second .header p {
-  padding: 0 16rem;
+  padding: 0 10rem;
 }
 
 .second .features {
@@ -238,7 +238,7 @@ nav .menu__contact {
 }
 
 .second .features .feature:nth-child(3) .feature__icon {
-  color: #F9C400;
+  color: #f9c400;
 }
 
 .second .features .feature:hover {
@@ -246,8 +246,8 @@ nav .menu__contact {
           box-shadow: 0 5px 17px lightgray;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .second .features .feature__icon {
@@ -275,8 +275,8 @@ nav .menu__contact {
 
 .second .features .feature__arrow:hover {
   color: #4125c7;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .second .all {
@@ -297,8 +297,8 @@ nav .menu__contact {
 .second .all button:hover {
   background-color: #4125c7;
   color: #fff;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 @media all and (max-width: 750px) {
