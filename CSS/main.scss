@@ -1,10 +1,10 @@
 @use 'vars/variables';
 @use 'vars/mixins' as mixins;
-@use 'about';
-@use 'contact';
-@use 'home';
+@use 'sections/about';
+@use 'sections/contact';
+@use 'sections/home';
+@use 'sections/services';
 @use 'menu';
-@use 'services';
 
 html {
   scroll-behavior: smooth;
