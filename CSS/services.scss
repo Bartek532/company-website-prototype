@@ -1,0 +1,122 @@
+.third {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  background-color: var(--primary-theme);
+  padding: 60px 70px;
+
+  .service {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+
+    .desc,
+    .build,
+    .delivery {
+      flex: 0 1 500px;
+    }
+
+    .second__desc {
+      margin-left: 20px;
+    }
+
+    .desc {
+      max-width: 500px;
+      margin-right: 50px;
+      padding: 0 40px;
+
+      &__title {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+      }
+
+      &__title2 {
+        padding-top: 10px;
+        line-height: 1.3rem;
+      }
+
+      &__text {
+        color: var(--primary-color);
+        padding: 15px 0;
+      }
+
+      &__feature {
+        padding: 15px 0;
+        display: flex;
+
+        .icon {
+          color: var(--primary-active);
+          display: flex;
+          border-radius: 50%;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(65, 37, 199, 0.1);
+          padding: 0 20px;
+          margin-right: 20px;
+          font-size: 1.3rem;
+        }
+
+        .text {
+          .title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            padding-bottom: 7px;
+          }
+
+          .feature__desc {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      button {
+        padding: 0.8rem 1.7rem;
+        border: 0 none;
+        margin: 0.7rem 0;
+        font-size: 1rem;
+        cursor: pointer;
+        color: var(--primary-active);
+        background-color: rgba(65, 37, 199, 0.1);
+
+        &:hover {
+          background-color: rgba(65, 37, 199, 1);
+          color: #fff;
+          transition: 0.4s;
+        }
+      }
+    }
+  }
+}
+
+@media all and(max-width:1200px) {
+  .third .service {
+    padding: 20px 0;
+
+    .build,
+    .delivery {
+      margin: 50px 10px;
+      max-width: 30rem;
+    }
+  }
+}
+
+@media all and(max-width:750px) {
+  .third {
+    padding: 30px;
+
+    .service {
+      .desc {
+        margin: 20px 0;
+        padding: 0 20px;
+      }
+    }
+  }
+}

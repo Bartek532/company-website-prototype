@@ -1,0 +1,26 @@
+{
+  "name": "sample",
+  "version": "1.0.0",
+  "description": "Sample landing page. Actually it doesn't have name ;)",
+  "main": "index.js",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.32.8"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bartek532/sample-page.git"
+  },
+  "keywords": [],
+  "author": "Bartosz Zagrodzki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bartek532/sample-page/issues"
+  },
+  "homepage": "https://bartek532.github.io/sample-page"
+}

@@ -1,102 +1,103 @@
-@import './Variables/variables';
-@import './Home/home';
-@import './Menu/menu';
-@import './About/about';
-@import './Services/services';
-@import './Contact/contact';
+@use 'vars/variables';
+@use 'vars/mixins' as mixins;
+@use 'about';
+@use 'contact';
+@use 'home';
+@use 'menu';
+@use 'services';
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 * {
-	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
-	-webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 *:focus {
-	box-shadow: 0 0 2px 1px $main-color;
-	outline: none;
+  box-shadow: 0 0 2px 1px var(--primary-color);
+  outline: none;
 }
 
 p {
-	line-height: 1.4rem;
+  line-height: 1.4rem;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 section {
-	position: relative;
+  position: relative;
 }
 
 .arrow-up {
-	position: fixed;
-	z-index: 100;
-	bottom: 20px;
-	right: 30px;
-	transform: rotate(-90deg);
-	color: gray;
-	cursor: pointer;
-	font-size: 2.5rem;
+  position: fixed;
+  z-index: 100;
+  bottom: 20px;
+  right: 30px;
+  transform: rotate(-90deg);
+  color: gray;
+  cursor: pointer;
+  font-size: 2.5rem;
 
-	&:hover {
-		color: $active-color;
-		transition: 0.3s;
-	}
+  &:hover {
+    color: var(--primary-active);
+    transition: 0.3s;
+  }
 }
 
 .circle {
-	position: absolute;
-	border-radius: 50%;
+  position: absolute;
+  border-radius: 50%;
 }
 
 .circle-1 {
-	@include circle(2rem, 13rem, 3rem, #f9c400);
+  @include mixins.circle(2rem, 13rem, 3rem, #f9c400);
 }
 
 .circle-2 {
-	@include circle(15rem, 2rem, 2rem, #fe9194);
+  @include mixins.circle(15rem, 2rem, 2rem, #fe9194);
 }
 
 .circle-3 {
-	@include circle(calc(100vw - 7rem), 12rem, 2.6rem, #06c59a);
+  @include mixins.circle(calc(100vw - 7rem), 12rem, 2.6rem, #06c59a);
 }
 
 .circle-4 {
-	@include circle(calc(100vw - 9rem), 37rem, 1.5rem, #69c4bf);
+  @include mixins.circle(calc(100vw - 9rem), 37rem, 1.5rem, #69c4bf);
 }
 
 .circle-5 {
-	@include circle(calc(100vw - 5rem), 24rem, 1.7rem, #fe9194);
+  @include mixins.circle(calc(100vw - 5rem), 24rem, 1.7rem, #fe9194);
 }
 
 .circle-6 {
-	@include circle(4rem, 40rem, 3rem, #4125c7);
+  @include mixins.circle(4rem, 40rem, 3rem, #4125c7);
 }
 
 @media all and(max-width:1100px) {
-	html {
-		font-size: 15px;
-	}
+  html {
+    font-size: 15px;
+  }
 }
 
 @media all and (max-width: 650px) {
-	html {
-		font-size: 13px;
-	}
+  html {
+    font-size: 13px;
+  }
 }
 
 @media all and (max-width: 700px) {
-	.arrow-up {
-		display: none;
-	}
+  .arrow-up {
+    display: none;
+  }
 }
