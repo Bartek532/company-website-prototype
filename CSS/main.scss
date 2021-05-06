@@ -23,6 +23,11 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   -webkit-tap-highlight-color: transparent;
+
+  &::selection {
+    background-color: var(--primary-red);
+    color: var(--primary-white);
+  }
 }
 
 *:focus {
