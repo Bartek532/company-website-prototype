@@ -1,9 +1,55 @@
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
+@use 'vars/mixins' as mixins;
+
+.nav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
   background-color: var(--primary-theme);
+  border-top: 2px solid red;
+
+  &__logo {
+    display: none;
+  }
+
+  .menu {
+    list-style-type: none;
+    width: 100%;
+    @include mixins.flex;
+    padding: 0;
+    margin: 0;
+
+    &__option {
+      @include mixins.flex;
+      flex-flow: column wrap;
+      text-decoration: none;
+      color: var(--primary-color);
+      padding: 1rem;
+      transition: color 0.2s;
+
+      &:focus {
+        box-shadow: none;
+        background-color: rgba(var(--primary-color-rgb), 0.2);
+      }
+
+      &--active {
+        color: var(--primary-active);
+      }
+
+      &__icon {
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+      }
+
+      &__label {
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  /*
 
   .logo {
     text-transform: uppercase;
@@ -11,7 +57,9 @@ nav {
     font-size: 1.4rem;
     margin-left: 10px;
   }
+  */
 
+  /*
   .menu {
     display: flex;
     justify-content: flex-end;
@@ -36,8 +84,10 @@ nav {
       box-shadow: 0px 2px 6px var(--primary-active);
     }
   }
+  */
 }
 
+/*
 @media all and (max-width: 700px) {
   nav .menu {
     position: fixed;
@@ -60,3 +110,4 @@ nav {
     }
   }
 }
+*/
