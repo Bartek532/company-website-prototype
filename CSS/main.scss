@@ -16,6 +16,7 @@ body {
   overflow-x: hidden;
   @include mixins.flex;
   flex-flow: column wrap;
+  background-color: var(--primary-theme);
 }
 
 * {
@@ -35,6 +36,12 @@ body {
   @include mixins.flex;
   flex-flow: column wrap;
 }
+
+section {
+  scroll-margin-top: 65px;
+}
+
+/*
 
 .arrow-up {
   position: fixed;
@@ -57,7 +64,7 @@ body {
   border-radius: 50%;
 }
 
-/*
+
 section {
   position: relative;
 }

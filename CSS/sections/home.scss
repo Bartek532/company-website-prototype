@@ -1,80 +1,66 @@
-.first {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@use 'vars/mixins' as mixins;
+
+.home {
+  @include mixins.flex;
   position: relative;
   flex-flow: column wrap;
-  padding: 60px 80px;
-  background-color: var(--primary-theme);
+  padding: 1.7rem 2rem;
 
-  h1 {
-    padding: 0 5rem;
+  &__title {
     text-align: center;
-    font-size: 3.7rem;
+    font-size: 3.4rem;
+    max-width: 50rem;
     color: var(--primary-color);
   }
 
-  p {
+  &__description {
     text-align: center;
-    font-size: 1.1rem;
-    width: 60%;
+    max-width: 50rem;
     color: var(--primary-color);
+    line-height: 1.5rem;
   }
 
-  .buttons {
-    margin: 30px 0;
+  &__btns {
+    margin: 1.8rem 0;
 
-    button {
-      padding: 12px 27px;
+    .btn {
+      padding: 0.75rem 1.6rem;
       border: 0 none;
-      margin: 0 10px;
+      margin: 0 0.6rem;
       cursor: pointer;
       font-size: 0.9rem;
-    }
+      transition: all 0.3s ease-out;
 
-    .purple {
-      color: var(--primary-active);
-      background-color: rgba(65, 37, 199, 0.1);
+      &--purple {
+        color: var(--primary-active);
+        background-color: rgba(var(--primary-active-rgb), 0.1);
 
-      &:hover {
-        background-color: rgba(65, 37, 199, 1);
-        color: #fff;
-        transition: 0.4s;
+        &:hover {
+          background-color: var(--primary-active);
+          color: var(--primary-white);
+        }
       }
-    }
 
-    .green {
-      color: #06c59a;
-      background-color: rgba(6, 197, 154, 0.1);
+      &--green {
+        color: var(--primary-green);
+        background-color: rgba(var(--primary-green-rgb), 0.1);
 
-      &:hover {
-        background-color: rgba(6, 197, 154, 1);
-        color: #fff;
-        transition: 0.4s;
+        &:hover {
+          background-color: var(--primary-green);
+          color: var(--primary-white);
+        }
       }
     }
   }
 
   .team {
-    margin-top: 30px;
-    max-width: 700px;
+    margin-top: 2rem;
+    max-width: 45rem;
   }
 }
 
-@media all and (max-width: 800px) {
-  .first {
-    padding: 30px 60px;
-
-    h1 {
-      padding: 0;
-    }
-
-    p {
-      width: 100%;
-    }
-
-    .buttons button {
-      padding: 10px 15px;
-    }
+@media all and (min-width: 750px) {
+  .home {
+    padding-top: 6rem;
   }
 }
