@@ -24,31 +24,12 @@
     margin: 1.8rem 0;
 
     .btn {
-      padding: 0.75rem 1.6rem;
-      border: 0 none;
-      margin: 0 0.6rem;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: all 0.3s ease-out;
-
       &--purple {
-        color: var(--primary-active);
-        background-color: rgba(var(--primary-active-rgb), 0.1);
-
-        &:hover {
-          background-color: var(--primary-active);
-          color: var(--primary-white);
-        }
+        @include mixins.btn;
       }
 
       &--green {
-        color: var(--primary-green);
-        background-color: rgba(var(--primary-green-rgb), 0.1);
-
-        &:hover {
-          background-color: var(--primary-green);
-          color: var(--primary-white);
-        }
+        @include mixins.btn(var(--primary-green), var(--primary-green-rgb));
       }
     }
   }

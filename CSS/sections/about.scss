@@ -1,81 +1,76 @@
-.second {
-  padding: 60px 5rem;
+@use 'vars/mixins' as mixins;
+
+.about {
+  padding: 4rem 2rem;
+  @include mixins.flex;
+  flex-flow: column wrap;
 
   .header {
-    display: flex;
-    justify-content: center;
+    @include mixins.flex;
     flex-flow: column wrap;
     text-align: center;
     color: var(--primary-color);
+    max-width: 40rem;
 
-    h2 {
+    &__title {
       font-size: 2rem;
-      margin-bottom: 0;
-    }
-
-    p {
-      padding: 0 10rem;
+      margin-bottom: 0.5rem;
     }
   }
 
   .features {
-    display: flex;
-    justify-content: center;
+    @include mixins.flex;
     flex-wrap: wrap;
-    padding: 40px 0;
+    padding: 2.3rem 0;
 
     .feature {
-      flex: 0 1 300px;
-      border: 3px solid var(--primary-theme);
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      flex: 0 1 20rem;
+      @include mixins.flex(center, flex-start);
       flex-flow: column wrap;
-      margin: 10px;
-      padding: 25px 25px 0 25px;
-
-      &__hide {
-        display: none;
-      }
-
-      &:first-child .feature__icon {
-        color: #fe9194;
-      }
-
-      &:nth-child(2) .feature__icon {
-        color: #06c59a;
-      }
-
-      &:nth-child(3) .feature__icon {
-        color: #f9c400;
-      }
-
-      &:hover {
-        box-shadow: 0 5px 17px lightgray;
-        transform: translateY(-5px);
-        transition: 0.3s;
-      }
+      margin: 0.7rem;
+      padding: 1.7rem;
+      padding-bottom: 0;
+      transition: transform 0.3s;
+      cursor: pointer;
+      box-shadow: 0 5px 17px var(--primary-gray);
 
       &__icon {
         font-size: 2.6rem;
-        padding: 10px 0;
+        padding: 0.65rem 0;
       }
 
       &__title {
         font-size: 1.3rem;
         font-weight: bold;
-        padding: 7px 0;
+        padding: 0.5rem 0;
       }
 
       &__desc {
-        margin: 5px 0;
+        margin: 0.4rem 0;
         color: var(--primary-color);
+        line-height: 1.45rem;
+        font-size: 0.95rem;
+      }
+
+      &__hidden {
+        display: none;
+      }
+
+      $colors: #e9c46a, #2a9d8f, #f4a261, #e9c46a, #e76f51, #219ebc, #264653;
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) .feature__icon {
+          color: nth($colors, $i);
+        }
+      }
+
+      &:hover {
+        transform: translateY(-5px);
       }
 
       &__arrow {
         font-size: 1.9rem;
-        margin: 15px 0;
-        color: lightgray;
+        margin: 1rem 0;
+        color: var(--primary-gray);
         cursor: pointer;
 
         &:hover {
@@ -86,34 +81,8 @@
     }
   }
 
-  .all {
-    width: 100%;
-    text-align: center;
-
-    button {
-      padding: 0.8rem 1.7rem;
-      border: 0 none;
-      margin: 0 0.7rem;
-      font-size: 1rem;
-      cursor: pointer;
-      color: var(--primary-active);
-      background-color: rgba(65, 37, 199, 0.1);
-
-      &:hover {
-        background-color: rgba(65, 37, 199, 1);
-        color: #fff;
-        transition: 0.4s;
-      }
-    }
-  }
-}
-
-@media all and (max-width: 750px) {
-  .second {
-    padding: 40px;
-
-    .header p {
-      padding: 0 3rem;
-    }
+  &__btn {
+    @include mixins.btn;
+    margin-top: 1rem;
   }
 }

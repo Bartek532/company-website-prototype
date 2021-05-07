@@ -11,3 +11,22 @@
   justify-content: $jus;
   align-items: $ali;
 }
+
+@mixin btn(
+  $color: var(--primary-active),
+  $backgroundColor: var(--primary-active-rgb)
+) {
+  padding: 0.75rem 1.6rem;
+  border: 0 none;
+  margin: 0 0.6rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-out;
+  color: $color;
+  background-color: rgba($backgroundColor, 0.1);
+
+  &:hover {
+    background-color: $color;
+    color: var(--primary-white);
+  }
+}
