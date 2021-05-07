@@ -1,5 +1,8 @@
 import { teamAnimation } from "./team";
 import { startAnimation } from "./start";
+import { buildAnimation } from "./build";
+import { deliveryAnimation } from "./delivery";
+import { aboutAnimation } from "./about";
 import gsap from "gsap";
 
 export const timeline = (
@@ -19,4 +22,7 @@ export const timeline = (
 export const handleAnimate = () => {
   startAnimation();
   teamAnimation();
+  aboutAnimation();
+  buildAnimation();
+  deliveryAnimation();
 };
