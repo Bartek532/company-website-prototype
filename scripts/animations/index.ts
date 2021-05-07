@@ -1,4 +1,5 @@
 import { teamAnimation } from "./team";
+import { startAnimation } from "./start";
 import gsap from "gsap";
 
 export const timeline = (
@@ -16,5 +17,6 @@ export const timeline = (
 };
 
 export const handleAnimate = () => {
+  startAnimation();
   teamAnimation();
 };
