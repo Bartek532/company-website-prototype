@@ -1298,7 +1298,7 @@
               <span aria-label="chart" class="fas fa-chart-bar"></span>
             </div>
             <div class="feature__title">Digital Analytics</div>
-            <p class="feature__desc">
+            <p class="feature__description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi
               neque ea ipsam. Illo quam saepe reprehenderit fugit, earum nobis!
             </p>
@@ -1311,7 +1311,7 @@
               <span aria-label="rocket" class="fas fa-rocket"></span>
             </div>
             <div class="feature__title">Digital Marketing</div>
-            <p class="feature__desc">
+            <p class="feature__description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
               nemo delectus eaque quis error et. Fugit provident quibusdam
               repudiandae dolores.
@@ -1325,7 +1325,7 @@
               <span aria-label="bulk" class="fas fa-mail-bulk"></span>
             </div>
             <div class="feature__title">Email Marketing</div>
-            <p class="feature__desc">
+            <p class="feature__description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque
               aliquid ducimus obcaecati fugit corporis quis iste itaque ipsum
               unde velit!
@@ -1339,7 +1339,7 @@
               <span aria-label="chart" class="fas fa-user-friends"></span>
             </div>
             <div class="feature__title">Professional team</div>
-            <p class="feature__desc">
+            <p class="feature__description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi
               neque ea ipsam. Illo quam saepe reprehenderit fugit, earum nobis!
             </p>
@@ -1352,7 +1352,7 @@
               <span aria-label="chart" class="fas fa-tachometer-alt"></span>
             </div>
             <div class="feature__title">Focused on speed</div>
-            <p class="feature__desc">
+            <p class="feature__description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi
               neque ea ipsam. Illo quam saepe reprehenderit fugit, earum nobis!
             </p>
@@ -1365,7 +1365,7 @@
               <span aria-label="chart" class="fas fa-concierge-bell"></span>
             </div>
             <div class="feature__title">Full service</div>
-            <p class="feature__desc">
+            <p class="feature__description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio modi
               neque ea ipsam. Illo quam saepe reprehenderit fugit, earum nobis!
             </p>
@@ -1377,40 +1377,44 @@
         <button class="about__btn">All features</button>
       </section>
       <section class="third">
+        <!--
         <div class="circle circle-3"></div>
         <div class="circle circle-4"></div>
         <div class="circle circle-2"></div>
-        <article class="service first-article" id="services">
-          <div class="desc">
-            <div class="desc__title">
+        -->
+        <article class="service" id="services">
+          <div class="description">
+            <h3 class="description__title">
               Get tips &amp; tricks how to build your team.
-            </div>
-            <p class="desc__text">
+            </h3>
+            <p class="description__text">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam,
               illo! Dolor at, maxime impedit animi architecto ex illo incidunt
               dolores.
             </p>
-            <div class="desc__feature">
-              <div class="icon">
+            <div class="description__feature feature">
+              <div class="feature__icon">
                 <span aria-label="rocket" class="fas fa-rocket"></span>
               </div>
-              <div class="text">
-                <div class="title">Raporting &amp; analysis</div>
-                <div class="feature__desc">
+              <div class="feature__descripion">
+                <h4 class="feature__description__title">
+                  Raporting &amp; analysis
+                </h4>
+                <div class="feature__description__text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Veniam, temporibus!
                 </div>
               </div>
             </div>
-            <div class="desc__feature">
-              <div class="icon">
+            <div class="description__feature feature">
+              <div class="feature__icon">
                 <span aria-label="bulk" class="fas fa-mail-bulk"></span>
               </div>
-              <div class="text">
-                <div class="title">Technical SEO Audit</div>
-                <div class="feature__desc">
+              <div class="feature__descripion">
+                <h4 class="feature__description__title">Technical SEO audit</h4>
+                <div class="feature__description__text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Odio, necessitatibus!
+                  Veniam, temporibus!
                 </div>
               </div>
             </div>
@@ -1791,8 +1795,10 @@
             </g>
           </svg>
         </article>
-        <article class="service second-article" id="social">
+        <article class="service" id="social">
+          <!--
           <div class="circle circle-4"></div>
+          -->
           <svg
             class="delivery"
             viewBox="0 0 950 704"
@@ -2201,26 +2207,27 @@
             </g>
           </svg>
 
-          <div class="desc second__desc">
-            <div class="desc__title">
+          <div class="description">
+            <div class="description__title">
               Social media allows big companies to act small again.
             </div>
-            <p class="desc__title2">
+            <p class="description__subtitle">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque
               culpa accusamus provident. Voluptates aspernatur perspiciatis sunt
               beatae. Quas, officia dignissimos.
             </p>
-            <p class="desc__text">
+            <p class="description__text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
               facilis consequatur dicta placeat necessitatibus, voluptatum
               sequi? Voluptatibus iste nisi repudiandae quisquam accusamus culpa
               enim, temporibus eligendi cumque illum aliquam dolorem veniam
               fugiat ducimus quaerat minima id officiis illo magni quos.
             </p>
-            <button>Learn more</button>
+            <button class="description__btn">Learn more</button>
           </div>
         </article>
       </section>
+      <!--
       <section class="contact" id="contact">
         <div class="circle circle-1"></div>
         <div class="circle circle-3"></div>
@@ -2235,6 +2242,7 @@
         </div>
         <div class="warning">Please enter an email</div>
       </section>
+      -->
       <footer>2020 &copy; All rights reserved</footer>
     </main>
     <script src="./scripts/index.ts"></script>

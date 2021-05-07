@@ -1,121 +1,86 @@
+@use 'vars/mixins' as mixins;
+
 .third {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include mixins.flex;
   flex-flow: column wrap;
-  background-color: var(--primary-theme);
-  padding: 60px 70px;
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 75rem;
 
   .service {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 60px 0;
+    justify-items: center;
+    padding: 1rem 0;
     position: relative;
+    width: 100%;
 
-    .desc,
+    .description,
     .build,
     .delivery {
-      flex: 0 1 500px;
+      max-width: 32rem;
+      width: 100%;
     }
 
-    .second__desc {
-      margin-left: 20px;
-    }
-
-    .desc {
-      max-width: 500px;
-      margin-right: 50px;
-      padding: 0 40px;
+    .description {
+      max-width: 32rem;
+      margin: 2rem;
 
       &__title {
         color: var(--primary-color);
         font-size: 1.5rem;
         font-weight: bold;
-        line-height: 1.7rem;
+        line-height: 1.8rem;
       }
 
-      &__title2 {
-        padding-top: 10px;
-        line-height: 1.3rem;
+      &__subtitle {
+        line-height: 1.5rem;
       }
 
       &__text {
         color: var(--primary-color);
-        padding: 15px 0;
+        padding: 0.8rem 0;
+        padding-top: 0;
+        line-height: 1.4rem;
+        font-size: 0.95rem;
       }
 
-      &__feature {
-        padding: 15px 0;
-        display: flex;
+      &__btn {
+        @include mixins.btn;
+      }
 
-        .icon {
+      .feature {
+        padding: 1rem 0;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        align-items: center;
+
+        &__icon {
           color: var(--primary-active);
-          display: flex;
           border-radius: 50%;
-          justify-content: center;
-          align-items: center;
-          background-color: rgba(65, 37, 199, 0.1);
-          padding: 0 20px;
+          @include mixins.flex;
+          background-color: rgba(var(--primary-active-rgb), 0.1);
+          width: 75px;
+          height: 75px;
           margin-right: 20px;
-          font-size: 1.3rem;
+          font-size: 1.4rem;
         }
 
-        .text {
-          .title {
+        &__description {
+          &__title {
             font-size: 1.1rem;
             font-weight: bold;
             color: var(--primary-color);
-            padding-bottom: 7px;
+            padding: 0.5rem 0;
+            margin: 0;
           }
 
-          .feature__desc {
+          &__text {
             font-size: 0.9rem;
+            line-height: 1.25rem;
           }
         }
-      }
-
-      button {
-        padding: 0.8rem 1.7rem;
-        border: 0 none;
-        margin: 0.7rem 0;
-        font-size: 1rem;
-        cursor: pointer;
-        color: var(--primary-active);
-        background-color: rgba(65, 37, 199, 0.1);
-
-        &:hover {
-          background-color: rgba(65, 37, 199, 1);
-          color: #fff;
-          transition: 0.4s;
-        }
-      }
-    }
-  }
-}
-
-@media all and(max-width:1200px) {
-  .third .service {
-    padding: 20px 0;
-
-    .build,
-    .delivery {
-      margin: 50px 10px;
-      max-width: 30rem;
-    }
-  }
-}
-
-@media all and(max-width:750px) {
-  .third {
-    padding: 30px;
-
-    .service {
-      .desc {
-        margin: 20px 0;
-        padding: 0 20px;
       }
     }
   }
