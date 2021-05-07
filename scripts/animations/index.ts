@@ -15,6 +15,6 @@ export const timeline = (
   });
 };
 
-export const animate = () => {
+export const handleAnimate = () => {
   teamAnimation();
 };

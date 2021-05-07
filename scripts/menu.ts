@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const sectionsIdentifiers = ["home", "about", "services", "social", "contact"];
 
-export const menu = () => {
+export const handleMenu = () => {
   sectionsIdentifiers.forEach(identifier => {
     const activeSection = document.querySelector(`#${identifier}`);
     const activeLink = document.querySelector(

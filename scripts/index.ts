@@ -1,5 +1,7 @@
-import { menu } from "./menu";
-import { animate } from "./animations";
+import { handleMenu } from "./menu";
+import { handleAnimate } from "./animations";
+import { handleShowAllFeatures } from "./features";
 
-menu();
-animate();
+handleMenu();
+handleAnimate();
+handleShowAllFeatures();
