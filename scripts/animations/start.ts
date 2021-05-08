@@ -25,11 +25,11 @@ export const startAnimation = () => {
       "start"
     )
     .addLabel("button")
-    .from(".first .circle", {
+    .from(".home .circle", {
       scale: 0,
       transformOrigin: "50% 50%",
-      stagger: Number("." + Math.floor(Math.random() * 5)),
-      duration: 0.4,
+      stagger: Number("." + Math.floor(Math.random() * 4)),
+      duration: 0.3,
     })
     .from(
       ".btn--purple",
