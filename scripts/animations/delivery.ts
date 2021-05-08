@@ -3,7 +3,7 @@ import { timeline } from ".";
 export const deliveryAnimation = () => {
   return timeline("#social", "top 50%", "+=200px")
     .from("#social .description", {
-      x: -400,
+      x: 400,
       opacity: 0,
       duration: 0.5,
     })

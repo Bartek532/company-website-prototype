@@ -1,107 +1,64 @@
-.contact {
-  padding: 2.3rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column wrap;
+@use 'vars/mixins' as mixins;
 
-  .title {
+.contact {
+  padding: 3.3rem 1.7rem;
+  @include mixins.flex;
+  flex-flow: column wrap;
+  max-width: 45rem;
+
+  &__title {
     text-transform: uppercase;
     color: var(--primary-color);
     font-size: 2rem;
-    margin-bottom: 0;
     padding: 0 2.7rem;
   }
 
-  .subtitle {
+  &__description {
     color: var(--primary-color);
-    max-width: 600px;
     text-align: center;
-    padding: 0 2.7rem;
+    line-height: 1.4rem;
   }
 
-  .newsletter {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 40px;
+  &__form {
+    @include mixins.flex;
+    flex-flow: column wrap;
     margin: 3rem 0 0.6rem 0;
-    box-shadow: 0 0 8px var(--primary-color);
-    width: 30rem;
-    position: relative;
-    z-index: 2;
+    width: 100%;
+    max-width: 30rem;
 
-    input {
-      padding: 0.7rem 1.2rem;
+    &__email {
+      padding: 0.8rem 1.4rem;
       border: 0 none;
       border-radius: 40px;
-      width: 100%;
       font-size: 1rem;
-      opacity: 0.5;
-
-      &:focus {
-        box-shadow: none;
-        opacity: 1;
-        transition: opacity 0.3s ease-in;
-      }
+      background-color: var(--primary-white);
+      width: 100%;
     }
 
-    button {
+    &__error {
+      color: var(--primary-red);
+      font-size: 0.9rem;
+      margin-top: 0.4rem;
+      display: none;
+    }
+
+    &__btn {
       border-radius: 40px;
-      padding: 0.6rem 2.1rem;
+      padding: 0.55rem 2.5rem;
       font-size: 1rem;
       border: 2px solid var(--primary-active);
-      color: #fff;
+      color: var(--primary-white);
       text-transform: uppercase;
       background-color: var(--primary-active);
       cursor: pointer;
       font-weight: bold;
+      transition: all 0.3s;
+      margin-top: 1.7rem;
 
       &:hover {
         color: var(--primary-active);
-        background-color: #fff;
-        transition: 0.3s;
+        background-color: var(--primary-white);
       }
     }
-  }
-
-  .warning {
-    color: red;
-    font-size: 0.8rem;
-    display: none;
-  }
-}
-
-footer {
-  width: 100%;
-  background-color: var(--primary-active);
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 30px;
-}
-
-@media all and (max-width: 1000px) {
-  .contact .newsletter {
-    flex-flow: column wrap;
-    box-shadow: none;
-    align-items: center;
-    width: 24rem;
-
-    input,
-    input:focus {
-      box-shadow: 0 0 8px var(--primary-color);
-    }
-
-    button {
-      margin-top: 20px;
-      width: 12rem;
-    }
-  }
-}
-
-@media all and (max-width: 700px) {
-  footer {
-    margin-bottom: 60px;
   }
 }

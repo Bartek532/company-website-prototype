@@ -2227,24 +2227,33 @@
           </div>
         </article>
       </section>
-      <!--
       <section class="contact" id="contact">
+        <!--
         <div class="circle circle-1"></div>
         <div class="circle circle-3"></div>
-        <h2 class="title">join us</h2>
-        <p class="subtitle">
+        -->
+        <h2 class="contact__title">join us</h2>
+        <p class="contact__description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illo
           inventore praesentium laboriosam earum sint quos a odit maxime unde.
         </p>
-        <div class="newsletter">
-          <input type="text" placeholder="Your email" id="email" />
-          <button class="send">send</button>
-        </div>
-        <div class="warning">Please enter an email</div>
+        <form class="contact__form">
+          <label class="sr-only" for="email">email</label>
+          <input
+            class="contact__form__email"
+            placeholder="Your email"
+            type="email"
+            id="email"
+            required
+          />
+          <span class="contact__form__error">Please enter a valid email.</span>
+          <button class="contact__form__btn">send</button>
+        </form>
       </section>
-      -->
-      <footer>2020 &copy; All rights reserved</footer>
     </main>
+    <footer class="footer">
+      <span class="copyright-date"></span> &copy; All rights reserved
+    </footer>
     <script src="./scripts/index.ts"></script>
   </body>
 </html>
