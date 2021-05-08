@@ -4,6 +4,9 @@
   width: $width;
   height: $width;
   background-color: $back;
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
 }
 
 @mixin flex($jus: center, $ali: center) {

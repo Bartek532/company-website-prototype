@@ -44,6 +44,7 @@ body {
 
 section {
   scroll-margin-top: 65px;
+  position: relative;
 }
 
 .footer {
@@ -79,44 +80,25 @@ section {
   }
 }
 
-/*
-
-
-
-.circle {
-  position: absolute;
-  border-radius: 50%;
-}
-
-
-section {
-  position: relative;
-}
-
 .circle-1 {
-  @include mixins.circle(2rem, 13rem, 3rem, #f9c400);
+  @include mixins.circle(1rem, 13rem, 3rem, #f9c400);
 }
 
 .circle-2 {
-  @include mixins.circle(15rem, 2rem, 2rem, #fe9194);
+  @include mixins.circle(3rem, 3rem, 2rem, #fe9194);
 }
 
 .circle-3 {
-  @include mixins.circle(calc(100vw - 7rem), 12rem, 2.6rem, #06c59a);
+  @include mixins.circle(calc(100% - 4rem), 8rem, 2.6rem, #06c59a);
 }
 
 .circle-4 {
-  @include mixins.circle(calc(100vw - 9rem), 37rem, 1.5rem, #69c4bf);
+  @include mixins.circle(calc(100% - 2rem), 37rem, 1.5rem, #4125c7);
 }
 
 .circle-5 {
-  @include mixins.circle(calc(100vw - 5rem), 24rem, 1.7rem, #fe9194);
+  @include mixins.circle(calc(100% - 12rem), 24rem, 1.7rem, #fe9194);
 }
-
-.circle-6 {
-  @include mixins.circle(4rem, 40rem, 3rem, #4125c7);
-}
-*/
 
 /*
   Improved screen reader only CSS class
