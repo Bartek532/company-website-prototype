@@ -10,7 +10,7 @@ export const handleNewsletter = () => {
     const formElements = (e.target as HTMLFormElement).elements;
     const emailValue = (formElements[0] as HTMLInputElement).value;
 
-    if (!emailValue || !EMAIL_REGEX.test(emailValue)) {
+    if (!EMAIL_REGEX.test(emailValue)) {
       newsletterWarning.style.display = "block";
     } else {
       newsletterWarning.style.display = "none";
